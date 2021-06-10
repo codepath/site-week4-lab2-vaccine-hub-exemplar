@@ -1,0 +1,36 @@
+{
+  "name": "vaccine-hub-express-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --ignore 'db/*' server.js",
+    "dev": "NODE_ENV=dev nodemon --ignore 'db/*' server.js",
+    "dev-win": "set NODE_ENV=dev && nodemon --ignore 'db/*' server.js",
+    "test": "jest -i"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "config.js",
+      "/tests/*"
+    ]
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^5.0.0-alpha.8",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.1.22",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  }
+}
